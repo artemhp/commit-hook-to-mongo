@@ -1,0 +1,19 @@
+{
+  "name": "commit-hook-to-mongo",
+  "version": "1.1.0",
+  "description": "",
+  "main": "commit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/artemhp/commit-hook-to-mongo",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "mongoose": "^4.11.3"
+  },
+  "engines": {
+    "node": "8.1.2"
+  }
+}
