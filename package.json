@@ -1,6 +1,6 @@
 {
   "name": "commit-hook-to-mongo",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "license": "MIT",
   "dependencies": {
     "await-exec": "^0.1.2",
-    "mongoose": "^5.2.1"
+    "mongoose": "^4.11.3"
   }
 }

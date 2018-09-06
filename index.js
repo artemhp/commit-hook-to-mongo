@@ -7,7 +7,7 @@ var GitCommit = require('./src/models/GitCommit.js');
 function recordCommit (author, db) {
     mongoose.Promise = Promise;
 
-    mongoose.connect(`mongodb://${db.user}:${db.password}@${db.server}/${db.name}`, { useNewUrlParser: true } (err) => {
+    mongoose.connect(`mongodb://${db.user}:${db.password}@${db.server}/${db.name}`, { useMongoClient: true }, (err) => {
         if (err) {
             console.log('Error connecting to mongo');
             process.exit(1);
