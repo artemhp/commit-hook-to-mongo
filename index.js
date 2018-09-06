@@ -7,7 +7,7 @@ var GitCommit = require('./src/models/GitCommit.js');
 function recordCommit (author, db) {
     mongoose.Promise = Promise;
 
-    mongoose.connect(`mongodb://${db.user}:${db.password}@${db.server}/${db.name}`, { useMongoClient: true }, (err) => {
+    mongoose.connect(`mongodb://${db.user}:${db.password}@${db.server}/${db.name}`, { useNewUrlParser: true } (err) => {
         if (err) {
             console.log('Error connecting to mongo');
             process.exit(1);
@@ -20,7 +20,7 @@ function recordCommit (author, db) {
 
         postData.message = (await exec(`git log -1 --pretty=%B`)).stdout.trim();
         postData.hash =  (await exec(`git log -1 --pretty=%H`)).stdout.trim();
-        postData.log =  (await exec(`git log -1 --pretty=%B`)).stdout.trim();
+        postData.log =  (await exec(`git log -1 --stat`)).stdout.trim();
         postData.files =  (await exec(`git show -1 --pretty="" --name-only`)).stdout.trim();
         postData.repo =  (await exec(`basename -s .git \`git config --get remote.origin.url\``)).stdout.trim();
 

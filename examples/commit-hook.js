@@ -1,7 +1,2 @@
-var commit = require('../index.js');
-commit('5b902d9cfb6fc013752c55e6', {
-  name: 'fed-dashboard',
-  user: 'artem',
-  password: '123',
-  server: 'test.mlab.com:22408'
-});
+// const commit = require('../index.js');
+// commit('userid', { name: 'dbname', user: 'admin', password: 'password', server: 'mlab:22408'});
